@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adobe Archi - Premium Construction Services</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#E67E22',secondary:'#34495E'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+}
+.heading-font {
+font-family: 'Montserrat', sans-serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=modern%2520architectural%2520building%2520with%2520glass%2520facade%2520and%2520concrete%2520elements%252C%2520dramatic%2520lighting%252C%2520professional%2520architectural%2520photography%252C%2520cinematic%252C%2520golden%2520hour%252C%2520high-end%2520construction%252C%2520premium%2520quality&width=1920&height=1080&seq=hero1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.stats-section {
+background-image: url('https://readdy.ai/api/search-image?query=abstract%2520architectural%2520pattern%252C%2520minimal%2520geometric%2520shapes%252C%2520light%2520and%2520shadow%2520play%252C%2520subtle%2520texture%252C%2520muted%2520colors%252C%2520professional%2520architectural%2520background%252C%2520clean%2520design&width=1920&height=600&seq=stats1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.testimonial-section {
+background-image: url('https://readdy.ai/api/search-image?query=abstract%2520architectural%2520pattern%252C%2520subtle%2520concrete%2520texture%252C%2520light%2520geometric%2520shapes%252C%2520minimalist%2520design%252C%2520soft%2520gradient%252C%2520light%2520beige%2520and%2520white%2520tones%252C%2520professional%2520background&width=1920&height=600&seq=testimonial1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+@media (max-width: 768px) {
+.mobile-menu {
+transition: transform 0.3s ease-in-out;
+}
+.mobile-menu.hidden {
+transform: translateX(100%);
+}
+}
+.count-up {
+transition: all 2s ease;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+<div class="container mx-auto px-4 md:px-8 flex items-center justify-between h-16 md:h-20">
+<!-- Logo -->
+<a href="#" class="font-['Pacifico'] text-primary text-2xl md:text-3xl">logo</a>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#home" class="text-gray-800 hover:text-primary font-medium transition-colors">Home</a>
+<a href="#about" class="text-gray-800 hover:text-primary font-medium transition-colors">About</a>
+<a href="#services" class="text-gray-800 hover:text-primary font-medium transition-colors">Services</a>
+<a href="#projects" class="text-gray-800 hover:text-primary font-medium transition-colors">Projects</a>
+<a href="#team" class="text-gray-800 hover:text-primary font-medium transition-colors">Team</a>
+<a href="#contact" class="bg-primary text-white px-6 py-2 rounded-button font-medium hover:bg-primary/90 transition-colors cursor-pointer">Contact Us</a>
+</nav>
+<!-- Mobile Menu Button -->
+<button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer">
+<i class="ri-menu-line ri-2x text-gray-800"></i>
+</button>
+</div>
+</header>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-full md:w-80 h-full bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+<div class="p-6">
+<div class="flex justify-between items-center mb-8">
+<a href="#" class="font-['Pacifico'] text-primary text-2xl">logo</a>
+<button id="close-menu-button" class="w-10 h-10 flex items-center justify-center cursor-pointer">
+<i class="ri-close-line ri-2x text-gray-800"></i>
+</button>
+</div>
+<nav class="flex flex-col space-y-6">
+<a href="#home" class="text-gray-800 hover:text-primary font-medium text-lg transition-colors">Home</a>
+<a href="#about" class="text-gray-800 hover:text-primary font-medium text-lg transition-colors">About</a>
+<a href="#services" class="text-gray-800 hover:text-primary font-medium text-lg transition-colors">Services</a>
+<a href="#projects" class="text-gray-800 hover:text-primary font-medium text-lg transition-colors">Projects</a>
+<a href="#team" class="text-gray-800 hover:text-primary font-medium text-lg transition-colors">Team</a>
+<a href="#contact" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors text-center mt-4 cursor-pointer">Contact Us</a>
+</nav>
+</div>
+</div>
+<!-- Hero Section -->
+<section id="home" class="hero-section min-h-screen flex items-center pt-16 md:pt-20">
+<div class="absolute inset-0 bg-black/50"></div>
+<div class="container mx-auto px-4 md:px-8 relative z-10">
+<div class="max-w-full md:max-w-2xl lg:max-w-3xl">
+<h1 class="heading-font text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Building Tomorrow's Landmarks Today</h1>
+<p class="text-white/90 text-lg md:text-xl mb-8 max-w-xl">Adobe Archi delivers exceptional construction services with precision, innovation, and unmatched expertise for projects of any scale.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#projects" class="bg-primary text-white px-8 py-4 rounded-button font-medium text-center hover:bg-primary/90 transition-colors cursor-pointer">Our Projects</a>
+<a href="#contact" class="bg-white text-gray-900 px-8 py-4 rounded-button font-medium text-center hover:bg-gray-100 transition-colors cursor-pointer">Get a Quote</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-20 md:py-24">
+<div class="container mx-auto px-4 md:px-8">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="w-full lg:w-1/2">
+<img src="https://readdy.ai/api/search-image?query=modern%2520construction%2520site%2520with%2520workers%2520in%2520safety%2520gear%252C%2520cranes%2520and%2520equipment%252C%2520professional%2520construction%2520photography%252C%2520architectural%2520project%2520in%2520progress%252C%2520high-quality%2520building%2520materials%252C%2520clean%2520worksite&width=800&height=600&seq=about1&orientation=landscape" alt="Construction site" class="w-full h-auto rounded-lg shadow-xl">
+</div>
+<div class="w-full lg:w-1/2">
+<h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Adobe Archi</h2>
+<p class="text-gray-700 mb-6">Founded in 2010, Adobe Archi has established itself as a premier construction company specializing in commercial, residential, and industrial projects. With a team of highly skilled professionals and a commitment to excellence, we've successfully completed over 500 projects across the country.</p>
+<p class="text-gray-700 mb-8">Our approach combines innovative design, sustainable building practices, and meticulous attention to detail to deliver exceptional results that exceed client expectations. We pride ourselves on our ability to bring architectural visions to life while maintaining the highest standards of quality and safety.</p>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-award-line ri-lg text-primary"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 mb-1">Quality Assurance</h3>
+<p class="text-gray-600 text-sm">Rigorous standards for exceptional results</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-timer-line ri-lg text-primary"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 mb-1">On-Time Delivery</h3>
+<p class="text-gray-600 text-sm">Consistent project completion within deadlines</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-team-line ri-lg text-primary"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 mb-1">Expert Team</h3>
+<p class="text-gray-600 text-sm">Highly skilled professionals in every role</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-recycle-line ri-lg text-primary"></i>
+</div>
+<div>
+<h3 class="font-semibold text-gray-900 mb-1">Sustainability</h3>
+<p class="text-gray-600 text-sm">Eco-friendly practices and materials</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-20 md:py-24 bg-gray-50">
+<div class="container mx-auto px-4 md:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Comprehensive Services</h2>
+<p class="text-gray-700">We offer a wide range of construction and architectural services tailored to meet the unique needs of each project, ensuring exceptional results from concept to completion.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 cursor-pointer">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%2520residential%2520building%2520exterior%252C%2520luxury%2520home%2520design%252C%2520contemporary%2520architecture%252C%2520professional%2520real%2520estate%2520photography%252C%2520high-end%2520finish%252C%2520clean%2520lines&width=600&height=400&seq=service1&orientation=landscape" alt="Residential Construction" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-3">Residential Construction</h3>
+<p class="text-gray-700 mb-4">From luxury custom homes to multi-family developments, we bring your residential vision to life with meticulous attention to detail and quality craftsmanship.</p>
+<a href="#contact" class="text-primary font-medium flex items-center cursor-pointer">
+Learn More
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 cursor-pointer">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%2520commercial%2520building%252C%2520office%2520complex%2520exterior%252C%2520corporate%2520headquarters%252C%2520glass%2520facade%252C%2520professional%2520architectural%2520photography%252C%2520business%2520district%252C%2520contemporary%2520design&width=600&height=400&seq=service2&orientation=landscape" alt="Commercial Construction" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-3">Commercial Construction</h3>
+<p class="text-gray-700 mb-4">We design and build commercial spaces that combine functionality, aesthetics, and efficiency, from office buildings to retail centers and hospitality venues.</p>
+<a href="#contact" class="text-primary font-medium flex items-center cursor-pointer">
+Learn More
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 cursor-pointer">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=industrial%2520facility%2520construction%252C%2520warehouse%2520building%252C%2520manufacturing%2520plant%252C%2520modern%2520industrial%2520architecture%252C%2520professional%2520photography%252C%2520clean%2520industrial%2520design%252C%2520functional%2520space&width=600&height=400&seq=service3&orientation=landscape" alt="Industrial Construction" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-3">Industrial Construction</h3>
+<p class="text-gray-700 mb-4">Our industrial construction services deliver robust, efficient facilities designed to meet specific operational requirements and industry regulations.</p>
+<a href="#contact" class="text-primary font-medium flex items-center cursor-pointer">
+Learn More
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 cursor-pointer">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=architectural%2520design%2520process%252C%2520blueprints%2520and%2520models%252C%2520professional%2520architects%2520working%252C%2520modern%2520design%2520studio%252C%2520architectural%2520drawings%252C%2520clean%2520workspace&width=600&height=400&seq=service4&orientation=landscape" alt="Architectural Design" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-3">Architectural Design</h3>
+<p class="text-gray-700 mb-4">Our architectural team creates innovative, functional designs that balance aesthetic appeal with practical considerations and sustainability principles.</p>
+<a href="#contact" class="text-primary font-medium flex items-center cursor-pointer">
+Learn More
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Service 5 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 cursor-pointer">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=building%2520renovation%2520in%2520progress%252C%2520interior%2520remodeling%252C%2520construction%2520workers%252C%2520professional%2520renovation%2520photography%252C%2520home%2520improvement%252C%2520quality%2520materials&width=600&height=400&seq=service5&orientation=landscape" alt="Renovations & Remodeling" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-3">Renovations & Remodeling</h3>
+<p class="text-gray-700 mb-4">Transform existing spaces with our comprehensive renovation services, breathing new life into buildings while preserving their character and integrity.</p>
+<a href="#contact" class="text-primary font-medium flex items-center cursor-pointer">
+Learn More
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Service 6 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105 cursor-pointer">
+<div class="h-48 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=construction%2520project%2520management%252C%2520site%2520supervisor%2520with%2520blueprints%252C%2520professional%2520team%2520meeting%252C%2520construction%2520planning%252C%2520organized%2520worksite%252C%2520quality%2520control&width=600&height=400&seq=service6&orientation=landscape" alt="Project Management" class="w-full h-full object-cover">
+</div>
+<div class="p-6">
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-3">Project Management</h3>
+<p class="text-gray-700 mb-4">Our experienced project managers ensure seamless execution from planning to completion, maintaining quality, timelines, and budgets throughout.</p>
+<a href="#contact" class="text-primary font-medium flex items-center cursor-pointer">
+Learn More
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="stats-section py-20 md:py-24 relative">
+<div class="absolute inset-0 bg-primary/80"></div>
+<div class="container mx-auto px-4 md:px-8 relative z-10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
+<div class="text-white text-4xl md:text-5xl font-bold mb-2">
+<span class="count-up" data-target="500">0</span>+
+</div>
+<p class="text-white/90 font-medium">Projects Completed</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
+<div class="text-white text-4xl md:text-5xl font-bold mb-2">
+<span class="count-up" data-target="15">0</span>
+</div>
+<p class="text-white/90 font-medium">Years of Experience</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
+<div class="text-white text-4xl md:text-5xl font-bold mb-2">
+<span class="count-up" data-target="120">0</span>+
+</div>
+<p class="text-white/90 font-medium">Expert Team Members</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
+<div class="text-white text-4xl md:text-5xl font-bold mb-2">
+<span class="count-up" data-target="98">0</span>%
+</div>
+<p class="text-white/90 font-medium">Client Satisfaction</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="py-20 md:py-24">
+<div class="container mx-auto px-4 md:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Featured Projects</h2>
+<p class="text-gray-700">Explore our portfolio of completed projects showcasing our expertise, innovation, and commitment to excellence in construction.</p>
+</div>
+<!-- Project Filters -->
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="project-filter active bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary/90 transition-colors cursor-pointer" data-filter="all">All Projects</button>
+<button class="project-filter bg-gray-200 text-gray-800 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-colors cursor-pointer" data-filter="residential">Residential</button>
+<button class="project-filter bg-gray-200 text-gray-800 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-colors cursor-pointer" data-filter="commercial">Commercial</button>
+<button class="project-filter bg-gray-200 text-gray-800 px-6 py-2 rounded-full font-medium hover:bg-gray-300 transition-colors cursor-pointer" data-filter="industrial">Industrial</button>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="project-item residential bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=luxury%2520modern%2520home%2520exterior%252C%2520contemporary%2520residential%2520architecture%252C%2520professional%2520real%2520estate%2520photography%252C%2520high-end%2520finish%252C%2520swimming%2520pool%252C%2520landscaped%2520garden&width=600&height=400&seq=project1&orientation=landscape" alt="Luxury Residence" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+<div class="p-6">
+<h3 class="text-white text-xl font-bold mb-2">Oceanview Residence</h3>
+<p class="text-white/80">Luxury home with panoramic ocean views</p>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Residential</span>
+<span class="text-gray-600 text-sm">Completed: 2024</span>
+</div>
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-2">Oceanview Residence</h3>
+<p class="text-gray-700 mb-4">A 6,500 sq ft luxury residence featuring sustainable materials, smart home technology, and breathtaking ocean views.</p>
+<a href="#" class="text-primary font-medium flex items-center cursor-pointer">
+View Details
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="project-item commercial bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%2520office%2520building%2520exterior%252C%2520corporate%2520headquarters%252C%2520glass%2520facade%252C%2520professional%2520architectural%2520photography%252C%2520business%2520district%252C%2520contemporary%2520design%252C%2520urban%2520setting&width=600&height=400&seq=project2&orientation=landscape" alt="Corporate Headquarters" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+<div class="p-6">
+<h3 class="text-white text-xl font-bold mb-2">Skyline Tower</h3>
+<p class="text-white/80">Modern corporate headquarters</p>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Commercial</span>
+<span class="text-gray-600 text-sm">Completed: 2023</span>
+</div>
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-2">Skyline Tower</h3>
+<p class="text-gray-700 mb-4">A 25-story LEED-certified office tower featuring cutting-edge design, energy-efficient systems, and collaborative workspaces.</p>
+<a href="#" class="text-primary font-medium flex items-center cursor-pointer">
+View Details
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="project-item industrial bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%2520industrial%2520facility%252C%2520manufacturing%2520plant%2520exterior%252C%2520warehouse%2520complex%252C%2520professional%2520industrial%2520photography%252C%2520clean%2520industrial%2520design%252C%2520logistics%2520center&width=600&height=400&seq=project3&orientation=landscape" alt="Manufacturing Facility" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+<div class="p-6">
+<h3 class="text-white text-xl font-bold mb-2">TechPro Manufacturing</h3>
+<p class="text-white/80">State-of-the-art production facility</p>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<span class="bg-amber-100 text-amber-800 text-xs font-medium px-3 py-1 rounded-full">Industrial</span>
+<span class="text-gray-600 text-sm">Completed: 2022</span>
+</div>
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-2">TechPro Manufacturing</h3>
+<p class="text-gray-700 mb-4">A 120,000 sq ft manufacturing facility designed for optimal workflow efficiency, featuring automated systems and sustainable operations.</p>
+<a href="#" class="text-primary font-medium flex items-center cursor-pointer">
+View Details
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="project-item residential bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%2520apartment%2520complex%252C%2520multi-family%2520residential%2520building%252C%2520contemporary%2520architecture%252C%2520professional%2520real%2520estate%2520photography%252C%2520urban%2520housing%252C%2520landscaped%2520courtyard&width=600&height=400&seq=project4&orientation=landscape" alt="Apartment Complex" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+<div class="p-6">
+<h3 class="text-white text-xl font-bold mb-2">Urban Heights</h3>
+<p class="text-white/80">Modern apartment community</p>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<span class="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full">Residential</span>
+<span class="text-gray-600 text-sm">Completed: 2023</span>
+</div>
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-2">Urban Heights</h3>
+<p class="text-gray-700 mb-4">A 150-unit luxury apartment complex with modern amenities, energy-efficient design, and community-focused spaces in an urban setting.</p>
+<a href="#" class="text-primary font-medium flex items-center cursor-pointer">
+View Details
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="project-item commercial bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%2520shopping%2520mall%2520interior%252C%2520retail%2520space%252C%2520commercial%2520center%252C%2520professional%2520architectural%2520photography%252C%2520contemporary%2520design%252C%2520high%2520ceilings%252C%2520natural%2520lighting&width=600&height=400&seq=project5&orientation=landscape" alt="Shopping Center" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+<div class="p-6">
+<h3 class="text-white text-xl font-bold mb-2">Riverside Galleria</h3>
+<p class="text-white/80">Premium shopping and entertainment center</p>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full">Commercial</span>
+<span class="text-gray-600 text-sm">Completed: 2022</span>
+</div>
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-2">Riverside Galleria</h3>
+<p class="text-gray-700 mb-4">A 200,000 sq ft retail and entertainment complex featuring a unique architectural design, sustainable elements, and vibrant public spaces.</p>
+<a href="#" class="text-primary font-medium flex items-center cursor-pointer">
+View Details
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="project-item industrial bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+<div class="relative h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=modern%2520logistics%2520center%252C%2520distribution%2520warehouse%252C%2520industrial%2520facility%252C%2520professional%2520industrial%2520photography%252C%2520clean%2520design%252C%2520loading%2520docks%252C%2520organized%2520storage&width=600&height=400&seq=project6&orientation=landscape" alt="Distribution Center" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
+<div class="p-6">
+<h3 class="text-white text-xl font-bold mb-2">Global Logistics Hub</h3>
+<p class="text-white/80">Advanced distribution facility</p>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<span class="bg-amber-100 text-amber-800 text-xs font-medium px-3 py-1 rounded-full">Industrial</span>
+<span class="text-gray-600 text-sm">Completed: 2024</span>
+</div>
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-2">Global Logistics Hub</h3>
+<p class="text-gray-700 mb-4">A 350,000 sq ft distribution center featuring automated systems, energy-efficient design, and strategic location for optimal logistics operations.</p>
+<a href="#" class="text-primary font-medium flex items-center cursor-pointer">
+View Details
+<i class="ri-arrow-right-line ri-lg ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="https://readdy.ai/home/1af11dc4-2184-4a8a-a951-f2dab4d49e13/94e1db0a-3837-4bc5-b23b-2fb6b24c69d9" data-readdy="true" class="bg-primary text-white px-8 py-4 rounded-button font-medium hover:bg-primary/90 transition-colors inline-block cursor-pointer">View All Projects</a>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="testimonial-section py-20 md:py-24 relative">
+<div class="absolute inset-0 bg-white/80"></div>
+<div class="container mx-auto px-4 md:px-8 relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+<p class="text-gray-700">Hear from our satisfied clients about their experience working with Adobe Archi on their construction projects.</p>
+</div>
+<div class="testimonial-slider relative">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-white rounded-lg shadow-md p-8">
+<div class="flex items-center mb-6">
+<div class="text-primary">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-700 mb-6">"Adobe Archi transformed our vision into reality with exceptional attention to detail. Their team's professionalism, expertise, and commitment to quality exceeded our expectations at every stage of the project."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520middle-aged%2520businessman%252C%2520confident%2520expression%252C%2520neutral%2520background%252C%2520corporate%2520portrait%252C%2520high-quality%2520professional%2520photography&width=100&height=100&seq=testimonial1&orientation=squarish" alt="Client" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Michael Richardson</h4>
+<p class="text-gray-600 text-sm">CEO, Vertex Innovations</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white rounded-lg shadow-md p-8">
+<div class="flex items-center mb-6">
+<div class="text-primary">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-700 mb-6">"Working with Adobe Archi on our corporate headquarters was a seamless experience. Their innovative solutions, transparent communication, and ability to deliver on time and within budget made them the perfect partner."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520businesswoman%252C%2520confident%2520expression%252C%2520neutral%2520background%252C%2520corporate%2520portrait%252C%2520high-quality%2520professional%2520photography&width=100&height=100&seq=testimonial2&orientation=squarish" alt="Client" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Jennifer Lawson</h4>
+<p class="text-gray-600 text-sm">Director, Horizon Group</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white rounded-lg shadow-md p-8">
+<div class="flex items-center mb-6">
+<div class="text-primary">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-half-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-700 mb-6">"The team at Adobe Archi brought unparalleled expertise to our residential development project. Their creative solutions, quality craftsmanship, and dedication to sustainability resulted in a truly exceptional community."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520real%2520estate%2520developer%252C%2520confident%2520expression%252C%2520neutral%2520background%252C%2520corporate%2520portrait%252C%2520high-quality%2520professional%2520photography&width=100&height=100&seq=testimonial3&orientation=squarish" alt="Client" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">David Thompson</h4>
+<p class="text-gray-600 text-sm">President, Parkview Developments</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section id="team" class="py-20 md:py-24 bg-gray-50">
+<div class="container mx-auto px-4 md:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Expert Team</h2>
+<p class="text-gray-700">Our talented professionals bring decades of combined experience and a passion for excellence to every project we undertake.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Team Member 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden group cursor-pointer">
+<div class="relative h-80 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520male%2520architect%2520or%2520construction%2520executive%252C%2520confident%2520pose%252C%2520business%2520attire%252C%2520neutral%2520background%252C%2520high-quality%2520professional%2520photography&width=400&height=500&seq=team1&orientation=portrait" alt="Team Member" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="p-6 text-center">
+<p class="text-white mb-6">With over 20 years of experience in architecture and construction management, Robert leads our team with vision and expertise.</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-twitter-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-mail-fill ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 text-center">
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-1">Robert Anderson</h3>
+<p class="text-primary font-medium">Chief Executive Officer</p>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden group cursor-pointer">
+<div class="relative h-80 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520female%2520architect%2520or%2520construction%2520executive%252C%2520confident%2520pose%252C%2520business%2520attire%252C%2520neutral%2520background%252C%2520high-quality%2520professional%2520photography&width=400&height=500&seq=team2&orientation=portrait" alt="Team Member" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="p-6 text-center">
+<p class="text-white mb-6">Sarah brings innovative design thinking and technical expertise to every project, creating spaces that inspire and endure.</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-twitter-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-mail-fill ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 text-center">
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-1">Sarah Chen</h3>
+<p class="text-primary font-medium">Principal Architect</p>
+</div>
+</div>
+<!-- Team Member 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden group cursor-pointer">
+<div class="relative h-80 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520male%2520construction%2520manager%252C%2520confident%2520pose%252C%2520business%2520casual%2520attire%252C%2520neutral%2520background%252C%2520high-quality%2520professional%2520photography&width=400&height=500&seq=team3&orientation=portrait" alt="Team Member" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="p-6 text-center">
+<p class="text-white mb-6">With extensive experience in project management, Michael ensures our projects are delivered on time, within budget, and to the highest standards.</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-twitter-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-mail-fill ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 text-center">
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-1">Michael Torres</h3>
+<p class="text-primary font-medium">Construction Director</p>
+</div>
+</div>
+<!-- Team Member 4 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden group cursor-pointer">
+<div class="relative h-80 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520female%2520interior%2520designer%252C%2520confident%2520pose%252C%2520stylish%2520business%2520attire%252C%2520neutral%2520background%252C%2520high-quality%2520professional%2520photography&width=400&height=500&seq=team4&orientation=portrait" alt="Team Member" class="w-full h-full object-cover">
+<div class="absolute inset-0 bg-primary/80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="p-6 text-center">
+<p class="text-white mb-6">Emily brings creativity and precision to our interior design projects, creating functional and aesthetically pleasing spaces for our clients.</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-twitter-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/20 rounded-full text-white hover:bg-white/40 transition-colors cursor-pointer">
+<i class="ri-mail-fill ri-lg"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 text-center">
+<h3 class="heading-font text-xl font-bold text-gray-900 mb-1">Emily Johnson</h3>
+<p class="text-primary font-medium">Interior Design Lead</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#" class="bg-primary text-white px-8 py-4 rounded-button font-medium hover:bg-primary/90 transition-colors inline-block cursor-pointer">View Full Team</a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 md:py-24">
+<div class="container mx-auto px-4 md:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="heading-font text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+<p class="text-gray-700">Contact us to discuss your project needs or schedule a consultation with our team of experts.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Contact Form -->
+<div class="w-full lg:w-1/2 bg-white rounded-lg shadow-md p-8">
+<h3 class="heading-font text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+<form id="contact-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+<input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+</div>
+<div>
+<label for="email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+<input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+</div>
+</div>
+<div class="mb-6">
+<label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+<input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+</div>
+<div class="mb-6">
+<label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+<input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+</div>
+<div class="mb-6">
+<label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+<textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-4 rounded-button font-medium hover:bg-primary/90 transition-colors cursor-pointer">Send Message</button>
+</form>
+</div>
+<!-- Contact Information -->
+<div class="w-full lg:w-1/2">
+<div class="bg-white rounded-lg shadow-md p-8 mb-8">
+<h3 class="heading-font text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-map-pin-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-1">Our Location</h4>
+<p class="text-gray-700">123 Business Avenue, Suite 500<br>New York, NY 10001</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-phone-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-1">Phone Number</h4>
+<p class="text-gray-700">+1 (555) 123-4567</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-mail-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-1">Email Address</h4>
+<p class="text-gray-700">info@adobearchi.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mr-4">
+<i class="ri-time-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-1">Business Hours</h4>
+<p class="text-gray-700">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map -->
+<div class="bg-white rounded-lg shadow-md p-8 h-80 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 md:py-24 bg-primary">
+<div class="container mx-auto px-4 md:px-8 text-center">
+<h2 class="heading-font text-3xl md:text-4xl font-bold text-white mb-6">Ready to Start Your Project?</h2>
+<p class="text-white/90 text-lg max-w-2xl mx-auto mb-8">Partner with Adobe Archi for exceptional construction services that bring your vision to life with precision, innovation, and unmatched expertise.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a href="#contact" class="bg-white text-primary px-8 py-4 rounded-button font-medium hover:bg-gray-100 transition-colors inline-block cursor-pointer">Contact Us Today</a>
+<a href="#projects" class="bg-transparent text-white border-2 border-white px-8 py-4 rounded-button font-medium hover:bg-white/10 transition-colors inline-block cursor-pointer">Explore Our Work</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-4 md:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<!-- Company Info -->
+<div>
+<a href="#" class="font-['Pacifico'] text-white text-3xl mb-6 inline-block">logo</a>
+<p class="text-gray-400 mb-6">Adobe Archi delivers exceptional construction services with precision, innovation, and unmatched expertise for projects of any scale.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-white hover:bg-primary transition-colors cursor-pointer">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-white hover:bg-primary transition-colors cursor-pointer">
+<i class="ri-twitter-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-white hover:bg-primary transition-colors cursor-pointer">
+<i class="ri-linkedin-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-white hover:bg-primary transition-colors cursor-pointer">
+<i class="ri-instagram-fill ri-lg"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-xl font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3">
+<li><a href="#home" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Home</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors cursor-pointer">About Us</a></li>
+<li><a href="#services" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Services</a></li>
+<li><a href="#projects" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Projects</a></li>
+<li><a href="#team" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Our Team</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Contact Us</a></li>
+</ul>
+</div>
+<!-- Services -->
+<div>
+<h3 class="text-xl font-bold mb-6">Our Services</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Residential Construction</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Commercial Construction</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Industrial Construction</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Architectural Design</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Renovations & Remodeling</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors cursor-pointer">Project Management</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div>
+<h3 class="text-xl font-bold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to our newsletter to receive updates and news about our latest projects.</p>
+<form class="mb-4">
+<div class="flex">
+<input type="email" placeholder="Your Email Address" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-l focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+<button type="submit" class="bg-primary px-4 py-3 rounded-r hover:bg-primary/90 transition-colors cursor-pointer">
+<i class="ri-send-plane-fill ri-lg"></i>
+</button>
+</div>
+</form>
+<p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy.</p>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 mb-4 md:mb-0">&copy; 2025 Adobe Archi. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-500 hover:text-white transition-colors cursor-pointer">Privacy Policy</a>
+<a href="#" class="text-gray-500 hover:text-white transition-colors cursor-pointer">Terms of Service</a>
+<a href="#" class="text-gray-500 hover:text-white transition-colors cursor-pointer">Sitemap</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Back to Top Button -->
+<button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 cursor-pointer hover:bg-primary/90 z-50">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+<!-- Success Message Modal -->
+<div id="success-modal" class="fixed inset-0 flex items-center justify-center z-50 bg-black/50 opacity-0 invisible transition-opacity duration-300">
+<div class="bg-white rounded-lg shadow-xl p-8 max-w-md w-full mx-4 transform scale-95 transition-transform duration-300">
+<div class="text-center mb-6">
+<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-check-line ri-2x text-green-600"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-2">Message Sent Successfully!</h3>
+<p class="text-gray-700">Thank you for contacting us. We'll get back to you as soon as possible.</p>
+</div>
+<button id="close-modal" class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors cursor-pointer">Close</button>
+</div>
+</div>
+<!-- Mobile Menu Script -->
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const closeMenuButton = document.getElementById('close-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.remove('translate-x-full');
+});
+closeMenuButton.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('translate-x-full');
+});
+});
+});
+</script>
+<!-- Project Filters Script -->
+<script id="project-filters-script">
+document.addEventListener('DOMContentLoaded', function() {
+const filterButtons = document.querySelectorAll('.project-filter');
+const projectItems = document.querySelectorAll('.project-item');
+filterButtons.forEach(button => {
+button.addEventListener('click', function() {
+const filter = this.getAttribute('data-filter');
+// Update active button
+filterButtons.forEach(btn => {
+btn.classList.remove('bg-primary', 'text-white');
+btn.classList.add('bg-gray-200', 'text-gray-800');
+});
+this.classList.remove('bg-gray-200', 'text-gray-800');
+this.classList.add('bg-primary', 'text-white');
+// Filter projects
+projectItems.forEach(item => {
+if (filter === 'all' || item.classList.contains(filter)) {
+item.style.display = 'block';
+} else {
+item.style.display = 'none';
+}
+});
+});
+});
+});
+</script>
+<!-- Counter Animation Script -->
+<script id="counter-animation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const counters = document.querySelectorAll('.count-up');
+const speed = 200;
+const animateCounters = () => {
+counters.forEach(counter => {
+const target = +counter.getAttribute('data-target');
+const count = +counter.innerText;
+const increment = target / speed;
+if (count < target) {
+counter.innerText = Math.ceil(count + increment);
+setTimeout(animateCounters, 1);
+} else {
+counter.innerText = target;
+}
+});
+};
+// Check if element is in viewport
+const isInViewport = el => {
+const rect = el.getBoundingClientRect();
+return (
+rect.top >= 0 &&
+rect.left >= 0 &&
+rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+);
+};
+// Start animation when stats section is in viewport
+const statsSection = document.querySelector('.stats-section');
+let animated = false;
+window.addEventListener('scroll', () => {
+if (isInViewport(statsSection) && !animated) {
+animateCounters();
+animated = true;
+}
+});
+// Check on initial load
+if (isInViewport(statsSection) && !animated) {
+animateCounters();
+animated = true;
+}
+});
+</script>
+<!-- Back to Top Button Script -->
+<script id="back-to-top-script">
+document.addEventListener('DOMContentLoaded', function() {
+const backToTopButton = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+if (window.pageYOffset > 300) {
+backToTopButton.classList.remove('opacity-0', 'invisible');
+backToTopButton.classList.add('opacity-100', 'visible');
+} else {
+backToTopButton.classList.remove('opacity-100', 'visible');
+backToTopButton.classList.add('opacity-0', 'invisible');
+}
+});
+backToTopButton.addEventListener('click', () => {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+});
+</script>
+<!-- Contact Form Script -->
+<script id="contact-form-script">
+document.addEventListener('DOMContentLoaded', function() {
+const contactForm = document.getElementById('contact-form');
+const successModal = document.getElementById('success-modal');
+const closeModalButton = document.getElementById('close-modal');
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+// Simulate form submission
+setTimeout(() => {
+// Show success modal
+successModal.classList.remove('opacity-0', 'invisible');
+successModal.querySelector('div').classList.remove('scale-95');
+successModal.querySelector('div').classList.add('scale-100');
+// Reset form
+contactForm.reset();
+}, 1000);
+});
+closeModalButton.addEventListener('click', function() {
+successModal.classList.add('opacity-0', 'invisible');
+successModal.querySelector('div').classList.remove('scale-100');
+successModal.querySelector('div').classList.add('scale-95');
+});
+});
+</script>
+<!-- Smooth Scrolling Script -->
+<script id="smooth-scrolling-script">
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80, // Adjust for header height
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>
